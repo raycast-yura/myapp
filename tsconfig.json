@@ -5,6 +5,20 @@
     /* Visit https://aka.ms/tsconfig.json to read more about this file */
 
     /* Completeness */
-    "skipLibCheck": true                                 /* Skip type checking all .d.ts files. */
+    "skipLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "pages/*": ["./app/pages/*"],
+      "routes/*": ["./app/routes/*"],
+      "components/*": ["./app/components/*"],
+      "store/*": ["./app/store/*"],
+      "sagas/*": ["./app/store/sagas/*"],
+      "selectors/*": ["./app/store/selectors/*"],
+      "slices/*": ["./app/store/slices/*"],
+      "hooks/*": ["./app/hooks/*"],
+      "client/*": ["app/client/*"],
+
+    }                                 /* Skip type checking all .d.ts files. */
   }
 }
+

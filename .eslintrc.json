@@ -9,6 +9,7 @@
     "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:react/jsx-runtime",
+    "plugin:react-hooks/recommended",
     "prettier"
   ],
   "parser": "@typescript-eslint/parser",
@@ -25,8 +26,17 @@
     "camelcase": "error",
     "spaced-comment": "error",
     "quotes": ["error", "single"],
-    "no-duplicate-imports": "error"
+    "no-duplicate-imports": "error",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+        "varsIgnorePattern": "React"
+      }
+    ]
   },
+  "ignorePatterns": ["**/*.js"],
   "settings": {
     "react": {
       "createClass": "createReactClass", // Regex for Component Factory to use,
@@ -68,3 +78,4 @@
     }
   }
 }
+
